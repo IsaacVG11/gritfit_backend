@@ -21,7 +21,7 @@ DB.connect((err) => {
 
 // Query del get de la tabla categorías
 app.get('/api/categories', (req, res) => {
-    const MY_SQL = 'SELECT * FROM categories';
+    const MY_SQL = 'SELECT * FROM category';
     DB.query(MY_SQL, (err, result) => {
         if (err) throw err;
         res.json(result);
